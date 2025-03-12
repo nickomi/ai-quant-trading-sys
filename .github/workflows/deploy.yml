@@ -1,0 +1,23 @@
+# .github/workflows/deploy.yml
+name: Deploy AI Trading Bot
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r backend/requirements.txt
+
+      - name: Run Trading Bot
+        run: python backend/main.py
