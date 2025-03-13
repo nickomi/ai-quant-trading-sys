@@ -8,7 +8,7 @@
 
 ## Installation
 1. Clone the repository
-2. Install dependencies (`pip install -r requirements.txt`)
+2. Install dependencies
 3. Start backend (`uvicorn backend.main:app --reload`)
 4. Start frontend (`npm start`)
 
